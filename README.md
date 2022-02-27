@@ -23,7 +23,8 @@ Creating Docker Registry with Frontend
 
 ## ssh into that EC2
 
-```sudo amazon-linux-extras install epel -y
+```
+sudo amazon-linux-extras install epel -y
 sudo yum install -y certbot python2-certbot-apache
 certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 ```
