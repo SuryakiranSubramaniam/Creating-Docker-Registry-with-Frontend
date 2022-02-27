@@ -109,6 +109,21 @@ server.crt  server.key
 # cd auth/
 # htpasswd -Bc registry.password username
 ```
+## Docker installation
+
+```
+amazon-linux-extras install docker -y
+systemctl enable docker
+systemctl start docker
+```
+
+## Docker-compose installation
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
+docker-compose version
+```
 
 ## Create docker-compose.yml `vim docker-compose.yml` 
 
@@ -158,6 +173,21 @@ volumes:
   data:
 networks:
   registry_net:
+```
+
+## File structure
+
+```
+# tree
+.
+├── auth
+│   └── registry.password
+├── certs
+│   ├── server.crt                         
+│   └── server.key
+└── docker-compose.yml
+
+2 directories, 4 files
 ```
 
 ## run the compose file
