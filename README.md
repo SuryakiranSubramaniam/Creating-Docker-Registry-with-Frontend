@@ -13,9 +13,9 @@ Creating Docker Registry with Frontend
 
 ![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/ns-hostinger.png)
 
-## Create an EC2 Instance AIM- (IP – 65.2.38.182)
+## Create an EC2 Instance Amazone Linux 2 - (IP – 65.2.38.182)
 
-![alt text]()
+![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/ami.png)
 
 ## Create an A record in route 53
 
