@@ -2,4 +2,4 @@
 Creating Docker Registry with Frontend
 
 
-![alt text](https://picsum.photos/id/237/200/300)
+![alt text](https://drive.google.com/file/d/1bj8SVYLOsAyBKqS36FY5DSXWIS2XFz4N/view?usp=sharing)
