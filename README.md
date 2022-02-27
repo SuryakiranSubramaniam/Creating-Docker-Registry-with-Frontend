@@ -42,7 +42,35 @@ certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 
 > Press Enter to Continue
 
-  
+**At this point go to Rout 53 and add a TXT record:**
+
+![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/txt-record.png)
+
+**After adding wait for some time and then press enter**
+
+> IMPORTANT NOTES:
+
+> Congratulations! Your certificate and chain have been saved at:
+
+> /etc/letsencrypt/live/site.suryakiran.online/fullchain.pem
+
+> Your key file has been saved at:
+
+> /etc/letsencrypt/live/site.suryakiran.online/privkey.pem
+
+> Your certificate will expire on 2022-05-26. To obtain a new or
+
+> tweaked version of this certificate in the future, simply run
+
+> certbot again. To non-interactively renew *all* of your
+
+> certificates, run "certbot renew"
+
+> If you like Certbot, please consider supporting our work by:
+
+> Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+
+> Donating to EFF:                    https://eff.org/donate-le
  
 
 
