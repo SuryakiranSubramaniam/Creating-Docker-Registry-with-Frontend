@@ -1,7 +1,7 @@
 # Creating-Docker-Registry-with-Frontend
 Creating Docker Registry with Frontend
 
-##Create a Hosted zone in aws Rout53
+## Create a Hosted zone in aws Rout53
 
 ![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/rout53.png)
 
