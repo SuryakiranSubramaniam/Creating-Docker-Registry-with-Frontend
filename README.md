@@ -89,6 +89,91 @@ ll /etc/letsencrypt/live/site.suryakiran.online/
 
 > -rw-r--r-- 1 root root 692 Feb 25 17:21 README
 
+```
+~]# mkdir certs
+~]# cp /etc/letsencrypt/live/site.suryakiran.online/privkey.pem /root/certs/server.key 
+```
+
+Copy contents of `/etc/letsencrypt/live/site.suryakiran.online/cert.pem` and `/etc/letsencrypt/live/site.suryakiran.online/chain.pem` to `/root/certs/server.crt`
+
+```
+[root@ip-172-31-37-31 certs]# pwd
+/root/certs
+[root@ip-172-31-37-31 certs]# ls
+server.crt  server.key
+```
 
 
+```
+# mkdir auth/
+# cd auth/
+# htpasswd -Bc registry.password username
+```
 
+## Create docker-compose.yml `vim docker-compose.yml` 
+
+```
+version: '3'
+services:
+  registry:
+
+    image: registry:2
+    ports:
+    - "5000:5000"
+
+    environment:
+
+      - REGISTRY_AUTH=htpasswd
+      - REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm
+      - REGISTRY_AUTH_HTPASSWD_PATH=/auth/registry.password
+      - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/data
+      - REGISTRY_HTTP_ADDR=0.0.0.0:5000
+      - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/server.crt
+      - REGISTRY_HTTP_TLS_KEY=/certs/server.key
+
+    volumes:
+      - data:/data
+      - ./certs:/certs
+      - ./auth:/auth
+
+    networks:
+      - registry_net
+
+  frontend:
+    environment:
+     - ENV_DOCKER_REGISTRY_HOST=registry
+     - ENV_DOCKER_REGISTRY_PORT=5000
+     - ENV_DOCKER_REGISTRY_USE_SSL=1
+     - ENV_USE_SSL="yes"
+    volumes:
+     - ./certs/server.crt:/etc/apache2/server.crt:ro
+     - ./certs/server.key:/etc/apache2/server.key:ro
+    ports:
+     -  443:443
+    image: konradkleine/docker-registry-frontend:v2
+    networks:
+     - registry_net
+
+volumes:
+  data:
+networks:
+  registry_net:
+```
+
+```
+# docker pull ubuntu:16.04
+
+#  docker tag ubuntu:16.04 site.suryakiran.online:5000/ubuntu:latest
+
+#  docker login site.suryakiran.online:5000
+
+#  docker push site.suryakiran.online:5000/ubuntu:latest
+```
+
+Now go to `https://site.suryakiran.online/repositories`
+
+![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/site.png)
+
+username: username
+
+password: surya
