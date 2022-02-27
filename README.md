@@ -2,4 +2,4 @@
 Creating Docker Registry with Frontend
 
 
-![alt text](https://drive.google.com/file/d/1bj8SVYLOsAyBKqS36FY5DSXWIS2XFz4N/view?usp=sharing)
+![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/Screenshot%20from%202022-02-25%2023-58-22.png)
