@@ -72,5 +72,23 @@ certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 
 > Donating to EFF:                    https://eff.org/donate-le
  
+**If you see this then your certbot SSL certificate have been created sucessfully**
+
+```
+ll /etc/letsencrypt/live/site.suryakiran.online/
+```
+> total 4
+
+> lrwxrwxrwx 1 root root  46 Feb 25 17:21 cert.pem -> ../../archive/site.suryakiran.online/cert1.pem
+
+> lrwxrwxrwx 1 root root  47 Feb 25 17:21 chain.pem -> ../../archive/site.suryakiran.online/chain1.pem
+
+> lrwxrwxrwx 1 root root  51 Feb 25 17:21 fullchain.pem -> ../../archive/site.suryakiran.online/fullchain1.pem
+
+> lrwxrwxrwx 1 root root  49 Feb 25 17:21 privkey.pem -> ../../archive/site.suryakiran.online/privkey1.pem
+
+> -rw-r--r-- 1 root root 692 Feb 25 17:21 README
+
+
 
 
