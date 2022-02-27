@@ -1,7 +1,7 @@
 # Creating-Docker-Registry-with-Frontend
 Creating Docker Registry with Frontend
 
-## Create a Hosted zone in aws Rout53
+## Create a Hosted zone in aws Route 53
 
 ![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/rout53.png)
 
@@ -17,7 +17,7 @@ Creating Docker Registry with Frontend
 
 ![alt text]()
 
-## Create an A record in rout 53
+## Create an A record in route 53
 
 ![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/a-record.png)
 
@@ -42,7 +42,7 @@ certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 
 > Press Enter to Continue
 
-**At this point go to Rout 53 and add a TXT record:**
+**At this point go to Route 53 and add a TXT record:**
 
 ![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/txt-record.png)
 
