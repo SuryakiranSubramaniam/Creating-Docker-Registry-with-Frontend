@@ -29,14 +29,14 @@ sudo yum install -y certbot python2-certbot-apache
 certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 ```
 
-`
-Please deploy a DNS TXT record under the name
-_acme-challenge.site.suryakiran.online with the following value:
-2BCB4dO86qn2_mdwAAY8eFiIzMsgvsh97P5N9EjDtlk
-Before continuing, verify the record is deployed.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue
-`
+
+> Please deploy a DNS TXT record under the name
+> _acme-challenge.site.suryakiran.online with the following value:
+> 2BCB4dO86qn2_mdwAAY8eFiIzMsgvsh97P5N9EjDtlk
+> Before continuing, verify the record is deployed.
+> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+> Press Enter to Continue
+
   
  
 
