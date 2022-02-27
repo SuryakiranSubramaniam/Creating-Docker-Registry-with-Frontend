@@ -29,28 +29,14 @@ sudo yum install -y certbot python2-certbot-apache
 certbot certonly -d site.suryakiran.online --manual --preferred-challenges dns
 ```
 
-![alt text](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/blob/main/img/Screenshot%20from%202022-02-25%2023-58-22.png)
-
-hello `hai` jdhf
-
-[this is a link](https://github.com/SuryakiranSubramaniam/Creating-Docker-Registry-with-Frontend/tree/main/img)
-
-paragraph
-> hello world
-
-|heading1|heading2|heading3|
-| --- | --- | --- |
-| t1 | t2 | t3 |
-
-
-hi **bold** *italic* ~~wrong~~
-
-lists
-
-- l1
-- l1
-  - l2
-  - l2
+`
+Please deploy a DNS TXT record under the name
+_acme-challenge.site.suryakiran.online with the following value:
+2BCB4dO86qn2_mdwAAY8eFiIzMsgvsh97P5N9EjDtlk
+Before continuing, verify the record is deployed.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Press Enter to Continue
+`
   
  
 
